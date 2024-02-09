@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Prosty</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<div class="simpleCalculator">
+    <h2>Kalkulator</h2>
+
+
+
+    <!--Wprowadzanie pierwszej liczby-->
+    <label for="number1">Wprowadź pierwszą liczbę:</label>
+    <input type="number" id="number1">
+    <br>
+    <br>
+
+    <!--Wprowadzanie operatora-->
+    <select id="operator">
+        <option value="choose">Wybierz operator</option>
+        <option value="+">Dodawanie (+)</option>
+        <option value="-">Odejmowanie (-)</option>
+        <option value="*">Mnożenie (*)</option>
+        <option value="/">Dzielenie (/)</option>
+    </select>
+    <br>
+    <br>
+
+    <!--Wprowadzanie drugiej liczby-->
+    <label for="number1">Wprowadź drugą liczbę:</label>
+    <input type="number" id="number2">
+    <br>
+    <br>
+
+    <button id="calculate" onclick="calculate()">Oblicz</button>
+
+    <h2><p id="result"></p></h2>
+
+    <script src="calculator.js"></script>
+</div>  
+</body>
+</html>
