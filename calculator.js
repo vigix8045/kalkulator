@@ -1,4 +1,11 @@
-
+document.addEventListener('DOMContentLoaded', function () {
+   const darkModeToggle = document.getElementById('darkModeToggle');
+   const body = document.body;
+ 
+   darkModeToggle.addEventListener('click', function () {
+     body.classList.toggle('dark-mode');
+   });
+ });
   
 function calculate(){
     var number1= parseInt(document.getElementById('number1').value);
@@ -41,19 +48,27 @@ function calculate(){
    
 }
 
+const display = document.getElementById("display");
 
-
-function appendValue(value) {
-    document.kalkulatorObrazkowy.displayImage.value += value;
+function appendToDisplay(input){
+    display.value += input;
 }
+
+function clearDisplay(){
+    display.value = "";
+}
+
 function calculateImage() {
-    try {
-        document.kalkulatorObrazkowy.displayImage.value = eval(document.kalkulatorObrazkowy.displayImage.value);
-    } catch (error) {
-        document.kalkulatorObrazkowy.displayImage.value = 'Error';
-    }
-}
+   try {
+     const result = eval(display.value);
+ 
+     if (Number.isFinite(result)) {
+       display.value = result;
+     } else {
+       throw new Error("Dzielenie przez zero");
+     }
+   } catch (error) {
+     display.value = "Błąd";
+   }
+ }
 
-function wyczyscWyswietlacz() {
-    document.forms["kalkulatorObrazkowy"].elements["displayImage"].value = '';
-}

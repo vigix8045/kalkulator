@@ -5,42 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Obrazkowy</title>
     <link rel="stylesheet" href="style.css">
-    <script src="calculator.js"></script>
+    
 </head>
 <body>
-<div>
-    <h2>Kalkulator Obrazkowy</h2>
-    <br>
+  
+    <div class="calculatorImage">
+        <input id="display" readonly>
+        <div id="keys">
+          
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
 
-    <form name="kalkulatorObrazkowy">
-        <input type="text" name="displayImage" id="displayImage" readonly>
-        <br>
-        <input type="button" value="7" onclick="appendValue('7')">
-        <input type="button" value="8" onclick="appendValue('8')">
-        <input type="button" value="9" onclick="appendValue('9')">
-        <input type="button" value="/" onclick="appendValue('/')">
-        <br>
-        <input type="button" value="4" onclick="appendValue('4')">
-        <input type="button" value="5" onclick="appendValue('5')">
-        <input type="button" value="6" onclick="appendValue('6')">
-        <input type="button" value="*" onclick="appendValue('*')">
-        <br>
-        <input type="button" value="1" onclick="appendValue('1')">
-        <input type="button" value="2" onclick="appendValue('2')">
-        <input type="button" value="3" onclick="appendValue('3')">
-        <input type="button" value="-" onclick="appendValue('-')">
-        <br>
-        <input type="button" value="0" onclick="appendValue('0')">
-        <input type="button" value="." onclick="appendValue('.')">
-        <input type="button" value="C" onclick="wyczyscWyswietlacz()">
-        <input type="button" value="+" onclick="appendValue('+')">
-        <input type="button" value="=" onclick="calculateImage()">
-        <br>
-        
-    </form>
-    
-</div>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="clearDisplay('C')">C</button>
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
 
-    
+
+            <p></p>
+            <p></p>
+            <p></p>
+            <button onclick="calculateImage('=')" class="operator-btn">=</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>   
 </body>
 </html>
+
